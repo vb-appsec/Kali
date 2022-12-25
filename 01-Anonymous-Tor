@@ -1,0 +1,27 @@
+Remove Existing Proxychains4
+-----------------------------
+1) sudo apt purge proxychains4
+2) sudo apt purge --auto-remove proxychains4
+3) sudo apt update
+
+
+Install latest Proxychains4
+-----------------------------
+1) sudo apt update
+2) sudo apt install proxychains4
+3) sudo apt install tor
+ 
+
+Config Proxychains4
+--------------------------------
+1) sudo nano /etc/proxychains4.conf
+
+   -- uncomment 
+      - dynamic_chain
+      - Proxy DNS requests - no leak for DNS data
+   -- comment
+      - strict_chain
+   -- addd below line
+       - socks5   127.0.0.1 9050   
+       
+       
